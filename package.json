@@ -1,0 +1,11 @@
+{
+  "name": "mqtt",
+  "version": "0.0.1",
+  "description": "Ali MQ test",
+  "main": "app.js",
+  "author": "xiaozhong",
+  "license": "ISC",
+  "dependencies": {
+    "urllib": "^2.19.0"
+  }
+}

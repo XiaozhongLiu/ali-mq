@@ -1,2 +1,2 @@
 # ali-mq
-A sample written for sending and receiving MQ messages
+A sample written for sending and receiving MQ messages via http.
