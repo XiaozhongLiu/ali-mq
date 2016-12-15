@@ -6,9 +6,11 @@ module.exports = {
     AccessKey: 'LTAIJOZNupLLSfMS',
     SecretKey: 'Sva8mlOmohcqPaH8RbGQx2ZwhxZRi1',
     Topic: 'topic_test_sole_1',
-    PIDArr: [
-        'PID_test_sole_1',
-        'PID_test_sole_2',
-        'PID_test_sole_3',
-    ]
+    PID: 'PID_test_sole_1',
+    CIDArr: [
+        'CID_test_sole_1',
+        'CID_test_sole_2',
+        'CID_test_sole_3',
+    ],
+    CIDPrefix: 'CID_test_sole_'
 };
