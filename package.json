@@ -6,6 +6,8 @@
   "author": "xiaozhong",
   "license": "ISC",
   "dependencies": {
+    "ejs-mate": "^2.3.0",
+    "express": "^4.14.0",
     "urllib": "^2.19.0"
   }
 }

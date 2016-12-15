@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumer Test</title>
+    <script src="mqttws31.js" type="text/javascript"></script>
+    <script src="config.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        let mqtt;
+        let reconnectTimeout = 2000;
+        function MQTTconnect() {
+            mqtt = new Paho.MQTT.Client(
+                host,   //MQTT域名
+                port,   //WebSocket端口
+                clientId//客户端ClientId
+            );
+            let options = {
+                timeout: 3,
+                onSuccess: onConnect,
+                onFailure: message => {
+                    setTimeout(MQTTconnect, reconnectTimeout);
+                }
+            };
+            mqtt.onConnectionLost = onConnectionLost;
+            mqtt.onMessageArrived = onMessageArrived;
+            if (username != null) {
+                options.userName = username;
+                options.password = password;
+            }
+            mqtt.connect(options);
+        }
+        function onConnect() {
+            // Connection succeeded; subscribe to our topic
+            mqtt.subscribe(topic, {qos: 0});
+            let message = new Paho.MQTT.Message("Hello mqtt!!");//set body
+            message.destinationName = topic;// set topic
+            mqtt.send(message);
+            console.log('connected');
+        }
+        function onConnectionLost(response) {
+            setTimeout(MQTTconnect, reconnectTimeout);
+        }
+        function onMessageArrived(message) {
+            let topic = message.destinationName;
+            let payload = message.payloadString;
+            console.log("recv msg : " + topic + "   " + payload);
+        }
+        MQTTconnect();
+    </script>
+</head>
+</html>
