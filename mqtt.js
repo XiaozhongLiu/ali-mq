@@ -12,8 +12,9 @@ let client = mqtt.connect(host, {
     clientId
 });
 
+let count = 0;
 setInterval(() => {
-    client.publish(topic, 'Hello mqtt', {}, function (err) {
+    client.publish(topic, 'Hello mqtt' + (count++), {}, function (err) {
         err || console.log('sent successfully');
     });
 }, 2000);
