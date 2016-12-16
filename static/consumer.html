@@ -17,9 +17,9 @@
             let options = {
                 timeout: 3,
                 onSuccess: onConnect,
-                onFailure: message => {
-                    setTimeout(MQTTconnect, reconnectTimeout);
-                }
+//                onFailure: message => {
+//                    setTimeout(MQTTconnect, reconnectTimeout);
+//                }
             };
             mqtt.onConnectionLost = onConnectionLost;
             mqtt.onMessageArrived = onMessageArrived;
@@ -38,7 +38,8 @@
             console.log('connected');
         }
         function onConnectionLost(response) {
-            setTimeout(MQTTconnect, reconnectTimeout);
+            //setTimeout(MQTTconnect, reconnectTimeout);
+            console.log(response);
         }
         function onMessageArrived(message) {
             let topic = message.destinationName;
