@@ -5,7 +5,6 @@ let username = 'LTAIJOZNupLLSfMS';
 let password = 'B/DfYIw2vsFotUOJMRl08hooZPQ=';
 let clientIdPrefix = 'GID_yiju_1@@@DID_yiju_';
 
-
 let count = 0;
 for (let i = 0; i < 800; i++) {
     let clientId = clientIdPrefix + i;

@@ -14,3 +14,5 @@ app.use('/', (req, res) => {
 app.listen(config.Port, function () {
     console.log('Webapp listening at http://localhost:' + config.Port);
 });
+
+console.log(require('./util/crypto').sign('GID_test_sole_1'));
