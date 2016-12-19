@@ -1,8 +1,8 @@
 let mqtt = require('mqtt');
 
-let host = 'mqtt://mqtt.cn-hangzhou.aliyuncs.com';
+let host = 'mqtt://mqtt-test.cn-qingdao.aliyuncs.com';
 let username = 'LTAIJOZNupLLSfMS';
-let password = 'B/DfYIw2vsFotUOJMRl08hooZPQ=';
+let password = 'z/9clHgQLoZR8LnFs+RdDpgiHVo=';
 let clientIdPrefix = 'GID_yiju_1@@@DID_yiju_';
 
 let count = 0;

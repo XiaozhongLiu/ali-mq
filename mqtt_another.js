@@ -5,10 +5,10 @@ if (!arg) {
     return console.log('请在命令行传入CID后缀');
 }
 
-let host = 'mqtt://mqtt.cn-hangzhou.aliyuncs.com';
+let host = 'mqtt://mqtt-test.cn-qingdao.aliyuncs.com';
 let username = 'LTAIJOZNupLLSfMS';
-let password = 'B/DfYIw2vsFotUOJMRl08hooZPQ=';
-let clientId = 'GID_yiju_1@@@DID_yiju_' + arg;
+let password = 'z/9clHgQLoZR8LnFs+RdDpgiHVo=';
+let clientId = 'GID_test_sole_1@@@DID_test_' + arg;
 
 let client = mqtt.connect(host, {
     username,

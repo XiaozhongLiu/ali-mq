@@ -3,7 +3,7 @@ module.exports = {
     Port: 3000,
 
     /**
-     * Ali MQ
+     * Ali MQ http conn config.
      */
     Host: 'http://publictest-rest.ons.aliyun.com/',
     AccessKey: 'LTAIJOZNupLLSfMS',
