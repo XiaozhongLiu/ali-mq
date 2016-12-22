@@ -10,9 +10,15 @@
         let host = 'mqtt-test.cn-qingdao.aliyuncs.com';
         let port = 80;
         let topic = 'topic_test_sole_1/sub_topic_1';
-        let userName = 'LTAIJOZNupLLSfMS';
-        let password = 'z/9clHgQLoZR8LnFs+RdDpgiHVo=';
-        let clientId = 'GID_test_sole_1@@@DID_test_1';
+        let clientId = 'GID_test_sole_1@@@DID_test_' + (new Date()).valueOf();
+
+//        // 主账号
+//        let userName = 'LTAIJOZNupLLSfMS';
+//        let password = 'z/9clHgQLoZR8LnFs+RdDpgiHVo=';
+
+        // RAM子账号(仅可收,不可发): recv_account
+        let userName = 'LTAIgKt7mpwnLWhr';
+        let password = 'oNlw2bPVUZ4htU+E5ymrTjGLDZY=';
 
         let mqtt;
         let reconnectTimeout = 2000;
@@ -35,7 +41,7 @@
         }
         function onConnect() {
             mqtt.subscribe(topic, {qos: 0});
-            //testSendMessage('Hello mqtt!');
+            //testSendMessage('Hello mqtt from page');
             console.log('connected');
         }
         function onConnFailure(error) {
