@@ -1,7 +1,7 @@
 let http = require('http');
 let client = require('urllib');
-let config = require('./config');
-let crypto = require('./util/crypto');
+let config = require('./../config');
+let crypto = require('./../util/crypto');
 let fs = require('fs');
 
 let arg = process.argv[2];
@@ -10,7 +10,7 @@ if (!arg) {
 }
 
 let body = 'test';
-let timeStamp = (new Date()).valueOf();
+let timeStamp = new Date().getTime();
 let cid = config.CIDPrefix + arg;
 
 // 官方说明: Signature 签名: (signString=[topic+”\n”+ cid+”\n”+time])

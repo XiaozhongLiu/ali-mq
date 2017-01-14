@@ -1,10 +1,10 @@
 let http = require('http');
 let client = require('urllib');
-let config = require('./config');
-let crypto = require('./util/crypto');
+let config = require('./../config');
+let crypto = require('./../util/crypto');
 
 let body = 'test';
-let timeStamp = (new Date()).valueOf();
+let timeStamp = new Date().getTime();
 
 // 官方说明: URL 中的 Key，Tag以及 POST Content-Type 没有任何的限制，只要确保Key 和 Tag 相同唯一即可
 let tag, key;

@@ -28,7 +28,6 @@ client.on('close', () => {
 });
 
 client.on('message', function (topic, message) {
-    // message is Buffer
     console.log(`Client ${arg} Received: ${message}`);
     //client.end();
 });
